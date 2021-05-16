@@ -32,7 +32,7 @@
         "affectsGlobalScope": false
       },
       "../index.ts": {
-        "version": "4ff5fa4c351f35314d2da7db4ce2c7efa5c990d4f898a100551dc994681fb8a7",
+        "version": "e7cc29aee71466c641ee2d7d467f98cf18a4fac7eaad98f5bf15d0c45fa28b08",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       }
@@ -42,12 +42,11 @@
       "composite": true,
       "outDir": "./",
       "paths": {
-        "@rename/api": [
+        "@cw/api": [
           "../api"
         ]
       },
       "pathsBasePath": "/Users/evgenijbeloded/Code/pnpm-workspces/packages/client",
-      "project": "..",
       "watch": true,
       "configFilePath": "../tsconfig.json"
     },

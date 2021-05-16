@@ -1,6 +1,7 @@
-import { api } from '@rename/api'
+// import type { API } from '@cw/api'
+import { api } from '@cw/api'
 
 console.log({ api })
-window.open('http://google.com')
+// window.open('http://google.com')
 
-export {}
+console.log('hello')
