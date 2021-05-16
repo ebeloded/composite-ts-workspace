@@ -1,6 +1,13 @@
 lockfileVersion: 5.3
 
 importers:
+
+  .:
+    specifiers:
+      typescript: 4.2.4
+    dependencies:
+      typescript: 4.2.4
+
   packages/api:
     specifiers:
       '@tsconfig/node12': 1.0.7
@@ -8,13 +15,16 @@ importers:
       '@tsconfig/node12': 1.0.7
 
   packages/client:
-    specifiers: {}
+    specifiers:
+      '@tsconfig/recommended': 1.0.1
+    devDependencies:
+      '@tsconfig/recommended': 1.0.1
 
   packages/service:
     specifiers:
       '@cw/api': workspace:1.0.0
       '@tsconfig/node12': 1.0.7
-      '@types/node': '12'
+      '@types/node': 12.20.13
     dependencies:
       '@cw/api': link:../api
     devDependencies:
@@ -22,16 +32,21 @@ importers:
       '@types/node': 12.20.13
 
 packages:
+
   /@tsconfig/node12/1.0.7:
-    resolution:
-      {
-        integrity: sha512-dgasobK/Y0wVMswcipr3k0HpevxFJLijN03A8mYfEPvWvOs14v0ZlYTR4kIgMx8g4+fTyTFv8/jLCIfRqLDJ4A==,
-      }
+    resolution: {integrity: sha512-dgasobK/Y0wVMswcipr3k0HpevxFJLijN03A8mYfEPvWvOs14v0ZlYTR4kIgMx8g4+fTyTFv8/jLCIfRqLDJ4A==}
+    dev: true
+
+  /@tsconfig/recommended/1.0.1:
+    resolution: {integrity: sha512-2xN+iGTbPBEzGSnVp/Hd64vKJCJWxsi9gfs88x4PPMyEjHJoA3o5BY9r5OLPHIZU2pAQxkSAsJFqn6itClP8mQ==}
     dev: true
 
   /@types/node/12.20.13:
-    resolution:
-      {
-        integrity: sha512-1x8W5OpxPq+T85OUsHRP6BqXeosKmeXRtjoF39STcdf/UWLqUsoehstZKOi0CunhVqHG17AyZgpj20eRVooK6A==,
-      }
+    resolution: {integrity: sha512-1x8W5OpxPq+T85OUsHRP6BqXeosKmeXRtjoF39STcdf/UWLqUsoehstZKOi0CunhVqHG17AyZgpj20eRVooK6A==}
     dev: true
+
+  /typescript/4.2.4:
+    resolution: {integrity: sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false

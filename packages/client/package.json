@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.1"
+  }
 }
