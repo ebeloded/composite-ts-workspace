@@ -1,0 +1,19 @@
+{
+  "name": "@rename/service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node12": "1.0.7",
+    "@types/node": "12"
+  },
+  "dependencies": {
+    "@rename/api": "workspace:1.0.0"
+  }
+}

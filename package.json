@@ -1,0 +1,14 @@
+{
+  "name": "rename",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "typescript": "4.2.4"
+  }
+}

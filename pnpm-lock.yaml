@@ -1,0 +1,33 @@
+lockfileVersion: 5.3
+
+importers:
+
+  packages/api:
+    specifiers:
+      '@tsconfig/node12': 1.0.7
+    devDependencies:
+      '@tsconfig/node12': 1.0.7
+
+  packages/client:
+    specifiers: {}
+
+  packages/service:
+    specifiers:
+      '@rename/api': workspace:1.0.0
+      '@tsconfig/node12': 1.0.7
+      '@types/node': '12'
+    dependencies:
+      '@rename/api': link:../api
+    devDependencies:
+      '@tsconfig/node12': 1.0.7
+      '@types/node': 12.20.13
+
+packages:
+
+  /@tsconfig/node12/1.0.7:
+    resolution: {integrity: sha512-dgasobK/Y0wVMswcipr3k0HpevxFJLijN03A8mYfEPvWvOs14v0ZlYTR4kIgMx8g4+fTyTFv8/jLCIfRqLDJ4A==}
+    dev: true
+
+  /@types/node/12.20.13:
+    resolution: {integrity: sha512-1x8W5OpxPq+T85OUsHRP6BqXeosKmeXRtjoF39STcdf/UWLqUsoehstZKOi0CunhVqHG17AyZgpj20eRVooK6A==}
+    dev: true

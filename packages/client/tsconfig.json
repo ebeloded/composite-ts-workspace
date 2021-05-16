@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": true,
+    "outDir": "build",
+    "paths": {
+      "@rename/api": ["../api"]
+    }
+  },
+  "references": [{ "path": "../api" }]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/node12",
+  "compilerOptions": {
+    "outDir": "build",
+    "composite": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "exclude": ["node_modules"],
+  "references": [{ "path": "../api" }]
+}

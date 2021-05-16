@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": []
+  },
+  "references": [
+    {
+      "path": "./packages/service"
+    },
+    {
+      "path": "./packages/client"
+    }
+  ],
+  "files": []
+}

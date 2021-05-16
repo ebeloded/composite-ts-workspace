@@ -1,0 +1,8 @@
+{
+  "extends": "@tsconfig/node12",
+  "compilerOptions": {
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "outDir": "build"
+  }
+}

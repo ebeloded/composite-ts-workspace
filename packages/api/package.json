@@ -1,0 +1,13 @@
+{
+  "name": "@rename/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@tsconfig/node12": "1.0.7"
+  }
+}
