@@ -1,0 +1,105 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Overview",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "Here's a question: how do we create a monorepo with properly configured TypeScript project references in a pnpm workspace?"
+    },
+    {
+      "file": "README.md",
+      "description": "Readme explains the challenge and what was done to make it work. You can get back to it after the tour.\n\nFor now here is what's important:\n\nThis monorepo is a pnpm workspace with three projects: `client`, `api`, `service`. The basic idea is that a browser-based application (`client`) is communicating to `api` through `service`.",
+      "line": 1,
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 5,
+          "character": 177
+        }
+      }
+    },
+    {
+      "file": "tsconfig.json",
+      "description": "Note that root tsconfig doesn't include any files. \n\nRunning `tsc -p .` will do absolutely nothing. ",
+      "line": 14
+    },
+    {
+      "file": "tsconfig.json",
+      "description": "However, the root config contains references to projects in this repo: service and client.\n\nYou can think of root tsconfig as the root of our dependency tree and we only need to mention the child nodes.\n\nRunning `tsc --build` will run typescript compilation on all referenced projects.",
+      "line": 5
+    },
+    {
+      "file": "packages/api/index.ts",
+      "description": "This is the `api` project, where we would implement the API functionality. It doesn't depend on and doesn't reference other projects in this workspace.",
+      "line": 12
+    },
+    {
+      "file": "packages/api/tsconfig.json",
+      "description": "To simplify our tsconfig files, each one will be extending one of recommended tsconfig files. In this case we use `node12` base.",
+      "line": 2
+    },
+    {
+      "file": "packages/api/tsconfig.json",
+      "description": "In order to be able to reference a project, `compilerOptions.composite` needs to be set to true.",
+      "line": 4
+    },
+    {
+      "file": "packages/api/tsconfig.json",
+      "description": "In a real setup we won't be using TypeScript compiler to produce JS files - the files would be transpiled by `esbuild`. However, in order for us use `api` as a referenced project and to be able to consume the inferred API type, we need to emit declarations (only).",
+      "line": 5
+    },
+    {
+      "file": "packages/service/package.json",
+      "description": "This is `service` project. It includes `api` as a dependency.",
+      "line": 13
+    },
+    {
+      "file": "packages/service/index.ts",
+      "description": "Having added `api` as dependency, we can now import stuff from that project.",
+      "line": 1
+    },
+    {
+      "file": "packages/service/index.ts",
+      "description": "Because service is a `node` project, `window` type should be undefined. This line is here to check correctness.",
+      "line": 4
+    },
+    {
+      "file": "packages/client/package.json",
+      "description": "This is client package.json file. Note that it doesn't depend on `api`",
+      "line": 10
+    },
+    {
+      "file": "packages/client/index.ts",
+      "description": "But we can import API type from `api` project 😮",
+      "line": 1
+    },
+    {
+      "file": "packages/client/tsconfig.json",
+      "description": "This is because \n1) we have a reference defined in tsconfig\n\n",
+      "line": 10
+    },
+    {
+      "file": "packages/client/tsconfig.json",
+      "description": "...and\n2. The alias is defined in paths",
+      "line": 7
+    },
+    {
+      "file": "README.md",
+      "description": "The End. Check out the readme and TS documentation if you want to dig deeper.",
+      "line": 28,
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 5,
+          "character": 177
+        }
+      }
+    }
+  ]
+}
