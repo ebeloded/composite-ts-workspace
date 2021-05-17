@@ -4,9 +4,9 @@ This is a demonstration of a composite TypeScript project configuration with pnp
 
 The workspace consists of three projects: `client`, `api`, `service`. The basic idea is that a browser-based application (`client`) is communicating to `api` through `service`.
 
-## The Problem
+## The Challenge
 
-The problem that this repo demonstrates a solution to is how to organize multiple projects in a monorepo, so that their dependency tree is reflected correctly, as well as taking advantage of incremental typescript compilation.
+The challenge that this repo demonstrates a solution to is how to organize multiple projects in a monorepo, so that their dependency tree is reflected correctly, as well as taking advantage of incremental typescript compilation.
 
 1. `client` should have access to browser-native types (such as `window`), but not have access to node types, such as `process`
 2. `api` and `service` shouldn't have access to browser types, but should be able to access node types
